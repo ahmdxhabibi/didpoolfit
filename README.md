@@ -1,4 +1,4 @@
-# coinpay
+# DIDPOOLFit
 
 A new Flutter project.
 

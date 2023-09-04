@@ -41,14 +41,25 @@ class WelcomeScreen extends StatelessWidget {
               Text(
                 'Everybody Can Train',
                 style: GoogleFonts.poppins(
-                  color: grey1,
-                  fontSize: 18,
-                ),
+                    color: grey1,
+                    fontSize: 18,
+                    shadows: <Shadow>[
+                      const Shadow(
+                        offset: Offset(0, 4.0),
+                        blurRadius: 4.0,
+                        color: Color(0xffB6B4C2),
+                      )
+                    ]),
               ),
               const SizedBox(
                 height: 264,
               ),
-              const CustomButton(),
+              CustomButton(
+                title: 'Get Started',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/onboarding1');
+                },
+              ),
             ],
           ),
         ],

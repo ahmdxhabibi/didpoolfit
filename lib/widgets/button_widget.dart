@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final String title;
+  final Function() onPressed;
+  const CustomButton({
+    super.key,
+    required this.title,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +20,9 @@ class CustomButton extends StatelessWidget {
       decoration: BoxDecoration(
           color: logoLinier, borderRadius: BorderRadius.circular(100)),
       child: TextButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(
-            'Get Started',
+            title,
             style: GoogleFonts.poppins(
               color: whiteColor,
               fontWeight: FontWeight.bold,

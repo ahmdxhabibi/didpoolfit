@@ -17,8 +17,16 @@ class CustomButton extends StatelessWidget {
       width: 315,
       height: 60,
       margin: const EdgeInsets.symmetric(horizontal: 30),
-      decoration: BoxDecoration(
-          color: logoLinier, borderRadius: BorderRadius.circular(100)),
+      decoration: ShapeDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment(-1.00, 0.08),
+          end: Alignment(1, -0.08),
+          colors: [Color(0xFFCC8FED), Color(0xFF6B50F6)],
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(99),
+        ),
+      ),
       child: TextButton(
           onPressed: onPressed,
           child: Text(

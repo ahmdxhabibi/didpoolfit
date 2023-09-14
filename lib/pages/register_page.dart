@@ -35,24 +35,167 @@ class RegisterPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            const CostumTextForm(
-              text: 'Full Name',
+            // FULL NAME
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: TextFormField(
+                autofocus: false,
+                obscureText: false,
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  color: const Color(0xffADA4A5),
+                ),
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.person_outline),
+                  fillColor: const Color(0xffF7F8F8),
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: BorderSide.none),
+                  hintText: 'Fullname',
+                ),
+              ),
             ),
-            const CostumTextForm(
-              text: 'Phone Number',
+            // PHONE NUMBER
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: TextFormField(
+                autofocus: false,
+                obscureText: false,
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  color: const Color(0xffADA4A5),
+                ),
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.phone_outlined),
+                  fillColor: const Color(0xffF7F8F8),
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: BorderSide.none),
+                  hintText: 'Phone Number',
+                ),
+              ),
             ),
-            const CostumTextForm(
-              text: 'Email',
+            //EMAIL
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: TextFormField(
+                autofocus: false,
+                obscureText: false,
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  color: const Color(0xffADA4A5),
+                ),
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.mail_outlined),
+                  fillColor: const Color(0xffF7F8F8),
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: BorderSide.none),
+                  hintText: 'Email',
+                ),
+              ),
             ),
-            const CostumTextForm(
-              text: 'Password',
-              hidePassword: true,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: TextFormField(
+                autofocus: false,
+                obscureText: true,
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  color: const Color(0xffADA4A5),
+                ),
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.person_outline),
+                  suffixIcon: const Icon(Icons.visibility_off_outlined),
+                  fillColor: const Color(0xffF7F8F8),
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: BorderSide.none),
+                  hintText: 'Password',
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 100,
             ),
             CustomButton(
               title: 'Register',
               onPressed: () {
                 Navigator.pushNamed(context, '/onboarding1');
               },
+            ),
+            // const SizedBox(
+            //   height: 29,
+            // ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 20),
+                  width: 141,
+                  height: 1,
+                  color: const Color(0xffDDDADA),
+                ),
+                Text(
+                  'OR',
+                  style: GoogleFonts.poppins(
+                    color: blackColor,
+                    fontSize: 12,
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 20),
+                  width: 141,
+                  height: 1,
+                  color: const Color(0xffDDDADA),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  width: 50,
+                  height: 50,
+                  decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                          width: 0.80, color: Color(0xFFDDD9DA)),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                  ),
+                  child: Image.asset(
+                    'assets/google.png',
+                    height: 20,
+                    width: 20,
+                  ),
+                ),
+                const SizedBox(
+                  width: 30,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  width: 50,
+                  height: 50,
+                  decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                          width: 0.80, color: Color(0xFFDDD9DA)),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                  ),
+                  child: Image.asset(
+                    'assets/facebook.png',
+                    height: 20,
+                    width: 20,
+                  ),
+                ),
+              ],
             )
           ],
         ),
